@@ -1,351 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua & Serena's Adventure Board</title>
 
-<title>Joshua & Serena's Adventure Board</title>
-
-<style>
-body{
-    margin:0;
-    font-family:Arial,Helvetica,sans-serif;
-    background:#f5f7fa;
-    color:#333;
-}
-
-header{
-    background:#2E7D32;
-    color:white;
-    text-align:center;
-    padding:50px 20px;
-}
-
-header h1{
-    margin:0;
-    font-size:3em;
-}
-
-header p{
-    font-size:1.2em;
-}
-
-section{
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
-}
-
-.category{
-    margin-bottom:60px;
-}
-
-.category h2{
-    border-bottom:3px solid #2E7D32;
-    padding-bottom:10px;
-}
-
-.grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-    gap:25px;
-}
-
-.card{
-    background:white;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 5px 15px rgba(0,0,0,.12);
-}
-
-.card img{
-    width:100%;
-    height:220px;
-    object-fit:cover;
-}
-
-.card-content{
-    padding:20px;
-}
-
-.card h3{
-    margin-top:0;
-}
-
-.tags{
-    margin-top:15px;
-}
-
-.tag{
-    display:inline-block;
-    background:#E8F5E9;
-    color:#2E7D32;
-    padding:5px 10px;
-    border-radius:20px;
-    margin:3px;
-    font-size:.85em;
-}
-
-footer{
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:30px;
-}
-</style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<header>
+<header class="hero">
 
-<h1>🗺️ Joshua & Serena's Adventure Board</h1>
+    <nav>
 
-<p>Our collection of weekend adventures, date nights, hidden gems, cabins, restaurants and road trips.</p>
+        <h1>🗺️ Adventure Board</h1>
+
+        <div class="nav-links">
+
+            <a href="#">Home</a>
+            <a href="#">Map</a>
+            <a href="#">Journal</a>
+            <a href="#">Completed</a>
+
+        </div>
+
+    </nav>
+
+    <div class="hero-content">
+
+        <h2>Joshua & Serena's Adventures</h2>
+
+        <p>
+            Every road trip. Every date. Every hidden gem.
+            One place to remember it all.
+        </p>
+
+    </div>
 
 </header>
 
+<main>
+
+<section class="dashboard">
+
+<div class="stat">
+<h3 id="totalTrips">0</h3>
+<p>Destinations</p>
+</div>
+
+<div class="stat">
+<h3 id="visitedTrips">0</h3>
+<p>Visited</p>
+</div>
+
+<div class="stat">
+<h3 id="favorites">0</h3>
+<p>Favorites</p>
+</div>
+
+<div class="stat">
+<h3 id="bucketList">0</h3>
+<p>Bucket List</p>
+</div>
+
+</section>
+
+<section class="search-area">
+
+<input
+type="text"
+id="searchBox"
+placeholder="Search adventures...">
+
+</section>
+
+<section class="filters">
+
+<button>All</button>
+<button>Date Night</button>
+<button>Weekend</button>
+<button>Hiking</button>
+<button>Cabins</button>
+<button>Food</button>
+<button>Seasonal</button>
+
+</section>
+
 <section>
 
-<div class="category">
+<h2 class="section-title">
+Our Adventures
+</h2>
 
-<h2>❤️ Date Nights</h2>
+<div id="cardContainer" class="card-grid">
 
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4">
-
-<div class="card-content">
-
-<h3>Tortoise Supper Club</h3>
-
-<p>Prime Rib • Live Jazz • Cocktails • Chicago</p>
-
-<div class="tags">
-<span class="tag">Date Night</span>
-<span class="tag">Fine Dining</span>
-<span class="tag">Live Music</span>
-</div>
-
-</div>
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
-
-<div class="card-content">
-
-<h3>Lantern Festival</h3>
-
-<p>Nighttime lantern displays, food vendors and live performances.</p>
-
-<div class="tags">
-<span class="tag">Fall</span>
-<span class="tag">Photography</span>
-<span class="tag">Seasonal</span>
-</div>
-
-</div>
-</div>
-
-</div>
-
-</div>
-
-<div class="category">
-
-<h2>🌳 Unique Stays</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1448375240586-882707db888b">
-
-<div class="card-content">
-
-<h3>Treehouses at Starved Rock</h3>
-
-<p>Luxury treehouses with fireplaces, fire pits, kayaks and hiking trails.</p>
-
-<div class="tags">
-<span class="tag">Cabin</span>
-<span class="tag">Romantic</span>
-<span class="tag">Weekend</span>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85">
-
-<div class="card-content">
-
-<h3>Wanderlust Cabin</h3>
-
-<p>Private cabin near Lodi, Wisconsin on 8+ secluded acres.</p>
-
-<div class="tags">
-<span class="tag">Cabin</span>
-<span class="tag">Nature</span>
-<span class="tag">Relaxing</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="category">
-
-<h2>🥾 Hiking & Outdoors</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee">
-
-<div class="card-content">
-
-<h3>Shawnee National Forest</h3>
-
-<p>Garden of the Gods, Rim Rock, Pomona Natural Bridge and Little Grand Canyon.</p>
-
-<div class="tags">
-<span class="tag">Hiking</span>
-<span class="tag">Photography</span>
-<span class="tag">Weekend</span>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b">
-
-<div class="card-content">
-
-<h3>La Crosse, Wisconsin</h3>
-
-<p>Riverfront hiking, bluff overlooks and live music downtown.</p>
-
-<div class="tags">
-<span class="tag">Road Trip</span>
-<span class="tag">River Town</span>
-<span class="tag">Scenic</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="category">
-
-<h2>🌻 Seasonal Adventures</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1473773508845-188df298d2d1">
-
-<div class="card-content">
-
-<h3>The Wildflower Farm</h3>
-
-<p>Sunflowers, food trucks, movie nights, yoga and farm-to-table dinners.</p>
-
-<div class="tags">
-<span class="tag">Fall</span>
-<span class="tag">Flowers</span>
-<span class="tag">Photography</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="category">
-
-<h2>🍦 Food Adventures</h2>
-
-<div class="grid">
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085">
-
-<div class="card-content">
-
-<h3>Woodstock Sweet Treat Crawl</h3>
-
-<p>Ice cream, popcorn, candy shops and the historic square.</p>
-
-<div class="tags">
-<span class="tag">Dessert</span>
-<span class="tag">Local</span>
-<span class="tag">Family</span>
-</div>
-
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93">
-
-<div class="card-content">
-
-<h3>Root Beer Revelry - Galena</h3>
-
-<p>Root beer tasting flights and downtown shopping.</p>
-
-<div class="tags">
-<span class="tag">Galena</span>
-<span class="tag">Sweet Treat</span>
-<span class="tag">Weekend</span>
-</div>
-
-</div>
-
-</div>
-
-</div>
+<!-- Adventure cards appear here -->
 
 </div>
 
 </section>
 
+</main>
+
 <footer>
 
-<h3>Adventure Count: 12+</h3>
-
-<p>Every new reel gets added to our board.</p>
+<p>
+Made with ❤️ for Joshua & Serena
+</p>
 
 </footer>
 
-</body>
+<script src="script.js"></script>
 
+</body>
 </html>
